@@ -1,0 +1,32 @@
+IBNU FATHAH_SQL
+
+1.Membuat Database "myshop"
+CREATE DATABASE myshop;
+
+2.Membuat table table di Database myshop
+- Table user = CREATE TABLE users( id integer PRIMARY KEY AUTO_INCREMENT, name varchar(255) NOT null, email varchar(255) NOT null, `password` varchar(255) NOT null );
+- Table categoris = CREATE TABLE categoris( id int AUTO_INCREMENT PRIMARY KEY, name varchar(255) NOT null );
+- Table items = CREATE TABLE items( id int AUTO_INCREMENT PRIMARY KEY, name varchar(255) NOT null, description varchar(255) NOT null, price int NOT null, stock int NOT null, category_id int NOT null, FOREIGN KEY (category_id) REFERENCES categoris(id) );
+
+3.Memasukan data pada table
+users 
+- INSERT INTO users (name, email, password) VALUES("John Doe", "john@doe.com", "john123"), ("Jane Doe", "jane@doe.com", "janita123");
+
+categories
+- INSERT INTO categoris(name) VALUES ("gadget"),("cloth"),("men"),("women"),("branded");
+
+items
+- INSERT INTO items(name, description, price, stock, category_id) VALUES("Samsung b50", "hape keren dari merek sumsang", 4000000, 100, 1), ("Uniklooh", "baju keren dari brand ternama", 500000, 50, 2), ("IMHO Watch", "jam tangan anak yang jujur banget", 2000000, 10, 1);
+
+4.Mengambil data users
+4a
+SELECT id,name, email FROM users;
+4b
+-SELECT * FROM items WHERE price > 1000000;
+-SELECT * FROM items WHERE name LIKE "%Watch%";
+4c
+SELECT items.*, categoris.name as kategori FROM categoris INNER JOIN items ON items.category_id = categoris.id;;
+
+5.Mengubah Data dari Database
+UPDATE items SET price=2500000 WHERE id = 1;
+
