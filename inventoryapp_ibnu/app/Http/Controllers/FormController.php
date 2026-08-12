@@ -6,15 +6,15 @@ use Illuminate\Http\Request;
 
 class FormController extends Controller
 {
-    public function daftar()
+    public function register()
     {
-        return view('daftar');
+        return view('register');
     }
-    public function submit(Request $request)
+    public function welcome(Request $request)
     {
         $firstName = $request->input('firstName');
         $lastName = $request->input('lastName');
 
-        return view('home', ["firstName" => $firstName, "lastName" => $lastName]);
+        return view('welcome', ["firstName" => $firstName, "lastName" => $lastName]);
     }
 }
