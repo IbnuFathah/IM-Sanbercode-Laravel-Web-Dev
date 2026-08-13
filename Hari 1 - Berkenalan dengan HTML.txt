@@ -1,0 +1,459 @@
+Hari 1 - Berkenalan dengan HTML
+by Rezky putra akkif
+ 
+
+Aplikasi Text Editor
+Link Download Text Editor
+
+Visual Studio Code : https://code.visualstudio.com/download 
+ 
+HTML 
+HTML merupakan singkatan dari Hyper Text Markup Language. HTML adalah sebuah bahasa standar untuk pembuatan halaman web. Dengan adanya HTML, kita dapat membedakan struktur yang tersusun dari sebuah halaman melalui tag atau elemen-elemen penyusunnya.
+
+Elemen atau tag pada HTML dikenali oleh browser seperti google chrome, firefox atau Ms Edge, dll. Browser tersebut mengidentifikasi setiap elemen penyusun HTML dan ditampilkan sesuai karakteristik elemen tersebut. Contohnya sebuah elemen paragraph akan ditampilkan sebagai tulisan panjang, atau sebuah elemen pranala/link akan dicetak dengan warna biru dan ketika mouse mendekat kursornya berubah menjadi telunjuk, dsb.
+
+Contoh sebuah struktur HTML sederhana:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Page Title</title>
+
+</head>
+
+<body>
+
+        <h1>My First Heading</h1>
+
+        <p>My first paragraph.</p>
+
+</body>
+
+</html>
+
+ 
+
+Dari contoh struktur HTML sederhana di atas kita dapat mengidentifikasi beberapa hal seperti berikut :
+
+<!DOCTYPE html> mengartikan bahwa dokumen ditulis dengan versi HTML5
+<html> adalah elemen induk atau elemen utama yang sering disebut juga root element dari sebuah halaman HTML.
+<head> berisi informasi tentang halaman HTML yang sedang dibuat
+<title> adalah judul dari halaman HTML yang akan tampil di tab browser.
+ 
+
+Sejarah dan Asal-usul HTML
+Cerita awal kemunculan HTML dimulai dari tahun 1980. Saat itu seorang ilmuan bernama Tim Berners-Lee sedang bekerja di CERN.
+
+ 
+
+
+
+Tim Berners-Lee (2009)
+
+ 
+
+CERN sendiri bukanlah perusahaan yang berkaitan tentang teknologi maupun internet. CERN adalah singkatan dari bahasa prancis: Conseil Européen pour la Recherche Nucléaire. Yang artinya: Komisi Eropa untuk Penelitian Fisika Nuklir.
+
+
+
+Website CERN (2020)
+
+Para peneliti di CERN membutuhkan sebuah cara atau sistem agar bisa saling berbagi dokumen hasil penelitian. Tim kemudian mencoba membuat ENQUIRE. Ini adalah software hypertext yang akan digunakan untuk berbagi dokumen. Lalu di tahun 1989, Tim memperkenalkan ide tentang hypertext berbasis internet. Ini nantinya akan menjadi cikal-bakal HTML.
+
+Tim kemudian memulai proyek baru dengan rekannya Robert Cailliau yang merupakan system engineer di CERN. Akan tetapi proyek ini tidak resmi diadopsi oleh CERN.
+
+Pada akhir tahun 1991, Tim Berners-Lee menerbitkan dokumen yang berjudul: “HTML Tags”. Dokumen ini berisi penjelasan tentang 18 tags awal yang menjadi konsep dasar HTML. HTML sebenarnya dirancang berdasarkan pada konsep bahasa markup yang dikenal dengan SGML (Standard Generalized Markup Language). SGML adalah sebuah standar internasional untuk membuat dokumen dengan tanda (markup) seperti paragraf, list, heading, dan lain-lain.
+
+Bisa dibilang HTML adalah implementasi dari SGML. Kalau kita lihat, beberapa tag seperti <title>, <p>, <li>, dan <h1> sampai <h6> berasal dari SGML. Namun, tidak semua yang ada di HTML berasal dari SGML. Salah satunya adalah Hyperlink, yang murni hasil pemikiran Tim Berners-Lee. Ide tentang HTML ini kemudian disebarkan ke dalam sebuah mailing list dan segera menjadi perhatian berbagai ilmuwan komputer di seluruh dunia.
+
+Perkembangan dan Versi HTML
+HTML punya beberapa versi, dari versi yang paling tua hingga yang terbaru. Berikut ini perkembangan versi HTML:
+
+[Draft] HTML 1.0 (Juni 1993) adalah versi HTML pertama, namun tidak resmi dirilis;
+HTML 2.0 (24 November 1995) adalah versi HTML kedua yang resmi pertamakali beredar di pasaran dan dirilis oleh IETF;
+[Draft] HTML 3.0 (28 Maret 1995) versi ini gagal beredar, karena banyak perubahan yang memicu perdebatan;
+HTML 3.2 (14 Januari 1997) versi resmi yang dirilis W3C pertamakali.
+HTML 4.0 (24 April 1998) versi pengembangan dari yang seblumnya;
+HTML 4.01 (24 Desember 1999) versi perbaikan dari HTML 4.0;
+XHTML 1.0 (26 Januari 2000) pengembangan dari HTML 4.01 dengan mengadopsi XML;
+XHTML 2.0 (Augustus 2002—Juli 2006) versi kedua dari XHTML;
+HTML 5 (28 Oktober 2014) versi html saat ini.
+Versi [draft] adalah versi yang tidak resmi dirilis ke pasaran. Bentuknya cuma masih dalam draft speksifikasi saja. Artinya tidak ada yang menggunakan versi [draft] untuk membuat web. Lalu, versi mana yang akan kita pakai? Tentunya versi terbaru, yakni HTML 5.
+
+Elemen & Hirarki pada HTML 
+
+Elemen HTML
+
+Elemen atau sering disebut dengan tag pada HTML adalah penyusun dari sebuah halaman web yang dapat dikenali oleh browser dan ditampilkan oleh browser sesuai karakteristik masing-masing. Sebuah elemen HTML terdiri dari tag pembuka(start/open tag), atribut (attribute), isi (content), dan tag penutup (close tag). Berikut ini ilustrasi Tag pada html
+
+
+
+Pada ilustrasi di atas merupakan contoh sebuah elemen paragraph dengan tag <p> . Di dalam tag tersebut terdapat atribut class yang disematkan ke dalam tag. Isi atau content dari sebuah tag paragraph <p> akan ditampilkan sebagai paragraf. lalu terakhir sebuah tag ditutup dengan sebuah tag penutup </p> .
+
+Catatan  : Tidak semua elemen HTML memiliki tag penutup seperti :  <input> <img> <meta> .
+
+Pada contoh di bawah ini Kita dapat melihat bahwa struktur dasar HTML dituliskan dari beberapa elemen. Pada setiap elemen HTML terdapat dua tag, yaitu pembuka tag <> dan penutup tag </>.
+
+ 
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+        <h1>My First Heading</h1>
+
+        <p>My first paragraph.</p>
+
+</body>
+
+</html>
+
+ 
+
+Hirarki HTML
+
+Didalam Sebuah elemen HTML dapat terisi dengan elemen-elemen lain di dalamnya. Semua dokumen HTML yang kita lihat di halaman web terdiri dari kumpulan elemen bersarang atau elemen yang mengandung elemen lain di dalamnya. Contohnya setelah tag pembuka dan sebelum penutup sebuah elemen, kita dapat meletakkan sebuah konten. Konten dapat berupa teks ataupun sebuah Tag HTML yang lain.
+
+
+
+Pada hirarki elemen HTML diatas, Contohnya tag <html> memiliki konten yaitu elemen <head> dan juga tag <body>. Lalu, elemen <head> memiliki konten berupa elemen <title> yang di dalamnya memiliki konten berupa teks dari judul halaman yang ditampilkan. Begitu pula dengan elemen lainnya.
+
+ 
+
+HTML Lanjutan
+pada materi ini kita akan mempelajari beberapa topik seperti :
+
+Semantic HTML
+Table HTML
+Validasi Form HTML
+SEO HTML
+ 
+
+Semantic HTML
+
+Apa itu semantic HTML ?
+
+Apa yang dimaksud dengan semantic tag? Semantic Tag atau Semantic Markup, adalah sebutan untuk tag-tag HTML yang memiliki ‘arti‘ atau ‘makna’. Kata semantic berasal dari kata yunani yang berarti ‘mempelajari arti‘ (the study of meaning).
+
+HTML ditujukan untuk membuat struktur halaman web. Tag <p> misalnya, digunakan untuk membuat paragraf, tag <h1> untuk membuat judul/header, dan tag <table> untuk membuat tabel, kesemua tag ini memiliki ‘arti‘ yang jelas, karena itu termasuk kedalam semantic tag.
+
+Sedangkan tag seperti <div> dan <span> tidak memiliki arti apa-apa, namun sering dijumpai untuk membuat struktur halaman. Jika anda pernah merancang web menggunakan CSS, tag <div> adalah tag yang sangat sering digunakan. Untuk membuat bagian header yang berisi menu navigasi atau logo, biasanya kita menggunakan tag <div id=”header”>, untuk membuat footer biasanya menggunakan <div id=”footer”>, sedangkan untuk menu utama bisa menggunakan <div id=”menu”> atau <div id=”nav”>.
+
+Walaupun dari atribut id kita bisa melihat ‘arti‘ dari tag-tag tersebut, akan tetapi tag <div> itu sendiri tidak memiliki arti apa-apa (non semantic tag). Web browser seperti screen reader untuk teman kita yang bekebutuhan khusus, tidak bisa menentukan apakah tag ini adalah header, atau konten dari website. Kita bisa saja membuat header halaman menggunakan <div id=”head”>, <div id=”header”>, atau <div id=”atas”>.
+
+HTML5 memperkenalkan tag-tag baru yang ditujukan untuk mengatasi hal ini. Daripada menggunakan <div id=”header”>, kita bisa menggunakan tag <header> sebagai penanda bagian atas halaman HTML, dan tag <footer> untuk penanda bagian bawah halaman web.
+
+Beberapa semantic tag yang dibawa oleh HTML5 adalah sebagai berikut:
+
+<article> — untuk membuat elemen artikel;
+<aside> — untuk membuat elemen bagian samping;
+<details> — untuk membuat elemen datail atau spoiler;
+<figcaption> — untuk membuat teks caption pada figure;
+<figure> — untuk membuat figur atau gambar pada artikel;
+<footer> — untuk membuat elemen bagian kaki dari web;
+<header> — untuk mebuat kepala kop dari web;
+<main> — untuk membuat elemen utama;
+<mark> — untuk menandai teks;
+<nav> — untuk membuat navigasi;
+<section> — untuk membuat bagian artikel;
+<summary> — untuk membuat ringkasan artikel atau isi spoiler;
+<time> — untuk membuat elemen yang menyatakan waktu;
+dan masih banyak lagi.
+ 
+
+Mengapa Harus Pakai Elemen Semantik?
+
+Salah satu keuntungan menggunakan elemen semantik adalah dokumen HTML kita akan mudah dibaca, baik itu oleh manusia maupun mesin.
+
+Coba perhatikan kode berikut:
+
+Contoh 1
+
+ 
+
+<div id="header"></div>
+
+<div class="section">
+
+              <div class="article">
+
+                             <div class="figure">
+
+                                           <img>
+
+                                           <div class="figcaption"></div>
+
+                             </div>
+
+              </div>
+
+</div>
+
+<div id="footer"></div>
+
+ 
+
+Sekarang coba bandingkan dengan kode ini:
+
+Contoh 2
+
+ 
+
+<header></header>
+
+<section>
+
+              <article>
+
+                             <figure>
+
+                                           <img>
+
+                                           <figcaption></figcaption>
+
+                             </figure>
+
+              </article>
+
+</section>
+
+<footer></footer>
+
+ 
+
+Pada contoh 1, Kamu mungkin akan mudah paham dengan membaca nama-nama class yang diberikan pada elemen <div>. Ada <div> yang bertugas untuk membuat elemen header, article, footer, dan sebagainya.
+
+Sekilas, tidak ada masalah dengan ini.. Tapi nanti kalau elemen <div> nya sudah banyak, kita akan kesulitan membacanya.
+
+Pada contoh 2, Ini tentunya akan lebih muda dibaca. Oh iya, elemen semantik juga bagus untuk SEO. Jadi kalau mau websitemu disukai mesin pencari, sebaiknya gunakanlah elemen ini.
+
+Oh ya, kamu bisa kunjungi website ini nih … sebagai panduan atau referensi kalua mau tau gimana cara implementasi semantic html
+
+Referensi 1 : https://www.petanikode.com/html-semantik/
+
+Referensi 2 : https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/
+
+Table HTML
+
+Apakah HTML bisa membuat Table ?
+
+Jawabannya adalah Bisa, ada beberapa tag yang bisa kita gunakan untuk membuat sebuah Table. Sekarang mari kita akan pelajari.
+
+Tabel (Table) adalah sebuah data tabular dalam bentuk grid yang terdiri dari kolom (column), baris (row) dan celll yang merupakan pertemuan antara kolom dan baris. HTML <table> element merepresentasikan data dengan lebih dari satu dimensi dalam bentuk sebuah tabel (table).
+
+Table di dalam HTML dibentuk dengan sebuah baris (row), tepatnya menggunakan element <tr> yang merupakan kepanjangan dari table row. Adapun element pendukung lain yang membentuk sebuah table adalah <th> (table header) dan <td> (table data). <td> menunjukkan sebuah cell, sedangkan <th> menunjukkan cell induk dan ditandai dengan tulisan cetak tebal.
+
+Element lain yang berkaitan dan digunakan dalam sebuah HTML table adalah <caption>, <col>, <colgroup>, <thead>, <tfoot> dan <tbody>.
+
+ 
+
+CATATAN : HTML table tidak boleh digunakan untuk layout halaman atau tidak tepat digunakan untuk mendesain tata letak beberapa element dalam sebuah tabel.
+
+ 
+
+Adapun beberapa attribute pendukung pada tag HTML Table :
+
+Align={left|center|right} -> Aligment horizontal untuk sel
+Valign = {top|middle|bottom} -> definisi aligment vertical dalam sel
+Colspan = n -> Jumlah n kolom sel diperlebar
+Rowspan = n -> Jumlah n baris sel diperlebar
+Nowrap -> matikan wrapping dalam sel
+ 
+
+Contoh Sederhana, Implementasi HTML table
+
+Contoh 1 ( Kode + Output )
+
+ 
+
+
+
+Contoh 2
+
+
+
+ 
+
+Referensi : https://www.apacara.com/tutorial/html/html-table-tag.html
+
+ 
+
+Belajar Validasi HTML Form
+
+Perihal membuat form di HTML, bukan hanya tentang bagaimana cara untuk mendapatkan data yang dimasukkan oleh pengguna. Beberapa hal harus dipertimbangkan untuk membuat form agar dapat digunakan dengan baik dan memenuhi tujuan awal 
+
+Salah satunya, validasi data form. Validasi data form diperlukan untuk memastikan bahwa data input oleh pengguna telah sesuai dengan setiap tujuan elemen form
+
+Misalnya, kita membuat field input untuk menerima data nama, maka pengguna harus memasukkan data nama mereka (bukan data nomor telepon, dll)
+
+Mungkin kita sudah banyak melihat contoh-contoh validasi form di beberapa website. Misalnya :
+
+Peringatan “This field is required”, artinya kita tidak boleh membiarkan kolom input kosong
+“Please enter a valid email address”, artinya kita harus memasukkan input berupa alamat email yang valid
+Kita juga dapat membuat pesan peringatan validasi form seperti di atas, dengan Bahasa Indonesia atau yang lain. Hal ini disebut sebagai custom message
+
+Beberapa website juga memiliki validasi form, yang tidak hanya memberi peringatan kepada pengguna mengenai kesalahan input, tapi juga memberi tahu pengguna bahwa input telah benar
+
+Pada dasarnya, ada 3 alasan mengapa validasi form diperlukan :
+
+Mencari input data yang benar dan sesuai format. Sebuah web/aplikasi tidak dapat berjalan dengan benar, jika data yang diolah tidak sesuai dengan kebutuhan aplikasi
+Melindungi akun pengguna. Misalnya, membuat pengguna untuk memasukkan data password yang aman (Beberapa tips untuk membuat password yang aman)
+Melindungi sistem/aplikasi. Sebagai developer kita harus tetap waspada terhadap berbagai macam kemungkinan dari kelemahan sistem. Oleh karena itu, validasi form yang kuat dapat meminimalisir perilaku pengguna yang ingin meretas sistem/aplikasi
+Ada banyak fitur built-in form validation yang dapat digunakan, kita akan membahas beberapa yang populer di antaranya :
+
+required
+Digunakan untuk menandai field yang harus berisi nilai (field tidak boleh kosong). Sebagai contoh :
+
+
+
+Validasi untuk menentukan panjang karakter atau nilai
+Pada elemen <input> dan <textarea>, kita dapat menentukan nilai minimum dan maksimum terhadap karakter/isi field
+
+Elemen <input> bertipe “text”, menggunakan atribut minlength dan maxlength. Nilai yang digunakan menentukan banyaknya karakter yang dapat di-input
+
+Elemen <input> bertipe “number”, menggunakan atribut min dan max. Nilai yang digunakan menentukan range dan batas angka yang dapat di-input. (Pada gambar, nilai yang dapat dimasukkan berkisar antara 1–10)
+
+
+
+ 
+
+Referensi : https://medium.com/@yunanadil/belajar-html-validasi-data-form-b76cdd8e1f7
+
+ 
+
+HTML SEO Basic
+
+Search Engine Optimization, teknik yang kerap menjadi misteri sekaligus yang paling banyak dicari. Teknik yang kerap “ditakuti” oleh para pemula yang baru belajar sekaligus dijadikan “senjata andalan” oleh para ahli mesin pencari (SEO).
+
+Tapi, memangnya apa sih fungsi optimasi SEO? Well, cara SEO yang digunakan dengan benar akan membantu meningkatkan peringkat dan trafik ke situs web kita. Jika Anda seorang blogger yang berniat untuk memonetisasi blog atau jika Anda seorang Internet marketer, SEO tentu akan sangat diperlukan.
+
+Di HTML ada beberapa dasar element yang bisa kita gunakan untuk mendukung SEO. yaitu :
+
+Define keywords for search engines:
+
+<meta name="keywords" content="HTML, CSS, JavaScript">
+Define a description of your web page:
+
+<meta name="description" content="Free Web tutorials for HTML and CSS">
+Define the author of a page:
+
+<meta name="author" content="John Doe">
+Setting the viewport to make your website look good on all devices:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+Masih banyak lagi element html yang termasuk dalam kategori pendukung SEO, seperti :
+ 
+<title>
+
+The <title> tag is shown in search results as the clickable link
+
+<a>
+
+Use on <a> tags with the rel attribute
+
+• rel="me" — When a link is about you
+
+• rel="spouse" — When a link is about your partner
+
+• rel="friend" — When a link is about your friend
+
+• rel="external" — When a link points to another website
+
+• rel="enclosure" — When a link points to a download
+
+• rel="license" — When a link points to the license file
+
+• rel="nofollow" — When search engines should ignore the link for rankings
+
+ 
+
+Link referensi belajar SEO, Semantic HTML dan yang lainnya : https://learn-the-web.algonquindesign.ca/topics/seo-cheat-sheet/
+
+ 
+
+Heading HTML
+
+ 
+Heading Pada HTML berfungsi untuk membuat judul atau subtitle pada tampilan website
+
+ 
+
+ 
+ 
+
+
+ 
+
+List HTML
+
+
+Terdapat 2 jenis list di HTML yaitu Unordered dan Ordered
+
+
+
+
+ 
+
+ 
+HTML Input Types
+Beberapa Input type yang bisa di gunakan di HTML:
+
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+ 
+ 
+Input Form HTML
+Gambar ini memiliki atribut alt yang kosong; nama berkasnya adalah image-4.png
+
+
+ 
+
+Select(Dropdown List)
+
+ 
+Berfungsi untuk menampilkan dropdown list kedalam tampilan website
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+Textarea
+
+
+Berfungsi Membuat inputan yang jauh lebih lebar
+
+
+
+
+attribute cols untuk lebar nilai kolom dari inputan dan attribute rows untuk besar nilai baris dari inputan
