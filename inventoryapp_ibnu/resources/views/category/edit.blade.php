@@ -25,5 +25,6 @@
     <textarea name="description" class="form-control" cols="30" rows="10">{{$categories->description}}</textarea>
   </div>
   <button type="submit" class="btn btn-primary">Edit</button>
+  <button type="button" onclick="history.back()" class="btn btn-primary">Kembali</button>
 </form>
 @endsection

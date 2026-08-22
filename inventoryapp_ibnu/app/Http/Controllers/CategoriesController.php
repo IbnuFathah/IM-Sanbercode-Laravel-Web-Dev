@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use App\Models\Categories;
 
 class CategoriesController extends Controller
 {
+    
     public function create()
     {
         return view('category.tambah');
@@ -15,7 +17,7 @@ class CategoriesController extends Controller
 
     public function store(Request $request)
     {
-        //Validation
+        //Validasi
         $request->validate([
             'name' => ['required', 'min:5'],
             'description' => ['required'],
@@ -24,8 +26,10 @@ class CategoriesController extends Controller
             "min" => "inputan :attribute :min karakter"
         ]);
 
-        //Insert data ke DB
+        //Mengambil waktu saat ini untuk kolom crated_at dan updated_at
         $now = Carbon::now();
+
+        //Insert data ke DB
         DB::table('categories')->insert([
             'name' => $request->input("name"),
             'description' => $request->input("description"),
@@ -38,26 +42,34 @@ class CategoriesController extends Controller
         return redirect('/categories')->with('success', 'Category Berhasil ditambahkan!');
 
 
-
-
-        return $request->all();
     }
+
+
+    //Menampilkan seluruh daftar kategori yang ada di database
     public function index()
     {
         $categories = DB::table('categories')->get();
         return view('category.tampil', ['categories' => $categories]);
     }
 
+
+    //Menampilkan detail satu kategori berdasarkan ID
     public function show($id)
     {
-        $categories = DB::table('categories')->find($id);
+        $categories = Categories::find($id);
         return view('category.detail', ['categories' => $categories]);
     }
+
+
+    //Menampilkan Form edit berdasarkan id yang dipilih untuk di edit
     public function edit($id)
     {
         $categories = DB::table('categories')->find($id);
         return view('category.edit', ['categories' => $categories]);
     }
+
+
+    //Memproses perubahan data dari Form edit dan memperbarui di database
      public function update(Request $request, $id)
     {
         //Validation
@@ -72,24 +84,30 @@ class CategoriesController extends Controller
         //Update data ke DB
         $now = Carbon::now();
 
+        //Mengupdate kolom name, description dan updated_at berdasarkan ID yang dipilih 
         DB::table('categories')
-        ->where('id', 1)
+        ->where('id', $id)
         ->update(
                 [
                     'name' => $request->input('name'),
                     'description' => $request->input('description'),
-                    'update_at' => $now,
+                    'updated_at' => $now,
                 ]
             );
 
 
-        //Arahkan ke halaman Tampil semua genre 
+        //Arahkan kembali ke halaman Tampil semua genre dengan pesan succes
         return redirect('/categories')->with('success', 'Category Berhasil diubah!');
 
 
 
+    }
 
-        return $request->all();
+    //Menghapus data kategori dari database berdasarkan ID
+    public function destroy($id)
+    {
+        DB::table('categories')->where('id', $id)->delete();
 
+        return redirect('/categories')->with('success', 'Category Berhasil dihapus!');
     }
 }

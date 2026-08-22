@@ -22,11 +22,43 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
+
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'role'
+    ];
+
+     /**
+     * 
+     * 
+     *@var list<string> 
+     */
+
+    protected $hidden =[
+        'password',
+        'remember_token'
+    ];
+
+    /**
+     * 
+     * 
+     *@return array<string, string> 
+     */
+     
+
     protected function casts(): array
     {
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function profile()
+    {
+        // Relasi One-to-One, satu user memiliki satu Profile
+        return $this->hasOne(Profile::class, 'user_id');
     }
 }
